@@ -32,13 +32,15 @@ function App() {
           </div>
           <div className="col-md-3  my-auto">
             <div className="header-upper-links d-flex justify-content-around px-2 py-2">
+
               <div className='text-white text-center'>
                 <BsFillPersonFill className='compare' />
                 <p className='m-0 compare-text'>MyAcount</p>
               </div>
-              <div className='text-white text-center my-auto'>
-
-                <BsCart3 className='compare'></BsCart3>
+              <Link to="/cart
+              ">
+                <div className='text-white text-center my-auto'>
+                  <BsCart3 className='compare'></BsCart3>
                   {/* <span className='cart-qty'>
                     {cartItems.length > 0 && (
                       <span className="cart-qty">{cartItems.length}</span>
@@ -46,10 +48,11 @@ function App() {
                   <span className='cart-qty'>
                     {cartItems.length > 0 ? (
                       <span className="cart-qty">{cartItems.length}</span>
-                    ):0}</span>
-                
-                <p className='m-0 compare-text'>Cart</p>
-              </div>
+                    ) : 0}</span>
+
+                  <p className='m-0 compare-text'>Cart</p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>

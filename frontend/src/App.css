@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+li{
+  list-style: none;
+}
 
 :root {
   --color-edf7f6: #edf7f6;
@@ -427,3 +430,28 @@ footer {
   height: fit-content;
 }
 /* footer end */
+/* cart data start */
+.cart-info{
+  margin-top: 100px;
+  padding: 10px;
+}
+.cart-product{
+  margin: 20px;
+  
+}
+.cart-product-img{
+  width: 50px;
+  height: 60px;
+  ;
+}
+@media (max-width: 768px) {
+  .cart-info{
+    margin-top: 100px;
+  }
+}
+@media (max-width: 425px) {
+  .cart-info{
+    margin-top: 120px;
+  }
+}
+/* cart data start */

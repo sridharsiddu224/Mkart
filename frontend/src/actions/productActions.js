@@ -23,7 +23,7 @@ export const listProducts = () => async (dispatch) => {
 export const singleProduct = (productId) => async (dispatch) => {
     dispatch({ type: PRODUCT_DETAILS_REQUEST, payload: productId })
     try {
-        const { data } = await Axios.get(`/app/products/${productId}`);
+        const { data } = await Axios.get(`/app/products/₹{productId}`);
 
         dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: data })
     } catch (error) {
