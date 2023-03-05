@@ -8,7 +8,7 @@ function Productlist(props) {
     const { products } = props
 
     return <div className="col-lg-3 col-md-6 d-flex justify-content-center main-card" key={products.id} >
-        <Link to={`/product/₹{products.id}`}>
+        <Link to={`/product/${products.id}`}>
             <div className="card h-100 shadow-sm text-center mx-auto" >
                 <img src={products.Image} className="card-img-top" alt="..." />
                 <div className="card-body">
@@ -19,7 +19,7 @@ function Productlist(props) {
                     <div>₹<span className='fs-3'>{products.price}</span></div>
 
                     <div className="d-grid gap-2 my-4">
-                        <Link className="btn Offer-btn" to={`/product/₹{products.id}`}>Check offer</Link>
+                        <Link className="btn Offer-btn" to={`/product/${products.id}`}>Check offer</Link>
                     </div>
                 </div>
             </div>

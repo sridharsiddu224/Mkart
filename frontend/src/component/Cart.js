@@ -25,15 +25,15 @@ export default function Cart() {
   return (
     <>
       <div className="row mx-auto cart-info">
-        <div className="col-md-8 bg-info">
+        <div className="col-md-8 p-md-5 ">
           {
             cart.cartItems.length === 0 ? <Errormsg>Cart is Empty <Link to="/">Go Shopping</Link></Errormsg> :
-              <ul className='row'>{cart.cartItems.map((item) => {
-                return <li key={item.Image}>
-                  <span className='cart-product cart-product-1'><img src={item.Image} className="cart-product-img" alt="product-img" /></span>
-                  <span className='cart-product cart-product-2'><Link to={`/product/₹{item.product}`}>{item.name}</Link></span>
+              <ul className='mx-auto'>{cart.cartItems.map((item,ind) => {
+                return <li key={ind} className="border border-top-1 p-1 my-1 bg-light rounded">
+                  <span className='cart-product cart-product-1'><img src={item.Image} className="cart-product-img" alt="product-img  bg-light" /></span>
+                  <span className='cart-product cart-product-2 '><Link to={`/product/${item.product}`} className="text-dark product-name-2">{item.name}</Link></span>
                   <span className='cart-product cart-product-3'>
-                    <select className='selectpicker'
+                    <select className='form-select'
                       value={item.qty}
                       onChange={(e) =>
                         dispatch(
@@ -51,7 +51,7 @@ export default function Cart() {
                   <span className='cart-product cart-product-4'>₹{item.price}</span>
                   <span className='cart-product cart-product-5'>
                     <button
-                      type="button" className='btn btn-light p-2'
+                      type="button" className='btn btn-dark p-2'
                     onClick={() => removeFromCartHandler(item.product)}
                     >
                       Delete

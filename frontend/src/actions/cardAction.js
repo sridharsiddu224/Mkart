@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export const addToCard = (productId, qtyInUrl) => async (dispatch, getState) => {
 
-    const { data } = await Axios.get(`/app/products/₹{productId}`);
+    const { data } = await Axios.get(`/app/products/${productId}`);
     
     dispatch({
         type: CART_ADD_ITEM,
