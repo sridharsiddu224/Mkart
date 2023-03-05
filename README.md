@@ -143,4 +143,10 @@ Create Ecommerce Website
     4) Procsed to checkout button
     5) Implement remove from cart action 
     6) https://github.com/basir/amazona/pull/16/files
-----3:37:53 time 
+    
+11) Implement Remove from cart action
+    1) https://github.com/basir/amazona/pull/16/files
+    2) create removeFromcart constant, action and reducers
+    3) use action in cart.js
+
+----3:57:42 time 

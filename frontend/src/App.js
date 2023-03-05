@@ -20,7 +20,7 @@ function App() {
       <header className="header-upper py-2">
         <div className="row mx-auto">
           <div className="col-md-3 col-4 my-auto">
-            <div className="text-white text-center ms-2 text-white"><Link to="/"><h1 className='text-white'><i>Mkart</i></h1></Link></div>
+            <div className="text-white text-center ms-2 text-white"><Link to="/"><h1 className='text-logo'><i>Mkart</i></h1></Link></div>
           </div>
           <div className="col-md-6 col-8 my-auto">
             <div className="input-group text-center">
@@ -33,13 +33,17 @@ function App() {
           <div className="col-md-3  my-auto">
             <div className="header-upper-links d-flex justify-content-around px-2 py-2">
 
-              <div className='text-white text-center'>
-                <BsFillPersonFill className='compare' />
-                <p className='m-0 compare-text'>MyAcount</p>
-              </div>
-              <Link to="/cart
+              <div className=' text-center'>
+                <Link to="/
               ">
-                <div className='text-white text-center my-auto'>
+                  <BsFillPersonFill className='compare' />
+                  <p className='m-0 compare-text'>MyAcount</p>
+                </Link>
+              </div>
+
+              <div className=' text-center my-auto'>
+                <Link to="/cart
+              ">
                   <BsCart3 className='compare'></BsCart3>
                   {/* <span className='cart-qty'>
                     {cartItems.length > 0 && (
@@ -51,8 +55,9 @@ function App() {
                     ) : 0}</span>
 
                   <p className='m-0 compare-text'>Cart</p>
-                </div>
-              </Link>
+                </Link>
+              </div>
+
             </div>
           </div>
         </div>

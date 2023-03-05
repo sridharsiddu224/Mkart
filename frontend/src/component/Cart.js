@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link, useLocation, useParams } from 'react-router-dom';
-import { addToCard } from '../actions/cardAction';
+import { addToCard, removeFromCart } from '../actions/cardAction';
 import { useDispatch, useSelector } from 'react-redux'
 import Errormsg from './Errormsg';
 
@@ -19,7 +19,13 @@ export default function Cart() {
       dispatch(addToCard(productId, qtyInUrl))
     }
   }, [dispatch, productId, qtyInUrl])
-  const removeFromCartHandler = () =>{
+
+  const removeFromCartHandler = (product) => {
+    dispatch(removeFromCart(product))
+  }
+
+
+  const buyHand = () => {
 
   }
   return (
@@ -28,13 +34,13 @@ export default function Cart() {
         <div className="col-md-8 p-md-5 ">
           {
             cart.cartItems.length === 0 ? <Errormsg>Cart is Empty <Link to="/">Go Shopping</Link></Errormsg> :
-              <ul className='mx-auto'>{cart.cartItems.map((item,ind) => {
+              <ul className='mx-auto'>{cart.cartItems.map((item, ind) => {
                 return <li key={ind} className="border border-top-1 p-1 my-1 bg-light rounded">
                   <span className='cart-product cart-product-1'><img src={item.Image} className="cart-product-img" alt="product-img  bg-light" /></span>
                   <span className='cart-product cart-product-2 '><Link to={`/product/${item.product}`} className="text-dark product-name-2">{item.name}</Link></span>
                   <span className='cart-product cart-product-3'>
                     <select className='form-select'
-                      value={item.qty}
+                      value={item.qtyInUrl}
                       onChange={(e) =>
                         dispatch(
                           addToCard(item.product, Number(e.target.value))
@@ -48,11 +54,11 @@ export default function Cart() {
                       ))}
                     </select>
                   </span>
-                  <span className='cart-product cart-product-4'>₹{item.price}</span>
+                  <span className='cart-product cart-product-4'>₹{item.price * item.qtyInUrl}</span>
                   <span className='cart-product cart-product-5'>
                     <button
-                      type="button" className='btn btn-dark p-2'
-                    onClick={() => removeFromCartHandler(item.product)}
+                      type="button" className='btn delete-btn p-2'
+                      onClick={() => removeFromCartHandler(item.name)}
                     >
                       Delete
                     </button>
@@ -64,8 +70,20 @@ export default function Cart() {
               </ul>
           }
         </div>
-        <div className="col-md-4 bg-warning">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam eveniet adipisci laborum voluptas corporis? Accusantium perspiciatis exercitationem dolorem pariatur quasi error voluptates rerum, temporibus, culpa itaque, at aspernatur! Consequatur, eaque!
+        <div className="col-md-4 p-md-5">
+          <div className="row text-center bg-white">
+            <div className='py-2'>
+              Subtotal({cart.cartItems.reduce((a, c, index) => a + eval(c.qtyInUrl),
+                0)}items)
+              : <span className='fs-5'>₹</span><span className='fs-3'>{cart.cartItems.reduce((a, c, index) => a + eval(c.qtyInUrl) * (c.price),
+                0)}</span>
+            </div>
+            <div className='py-2'>
+              <button className="btn cart-pay form-control" disabled={cart.cartItems.length === 0}
+              >Proceed to buy</button>
+
+            </div>
+          </div>
         </div>
       </div>
     </>

@@ -38,10 +38,10 @@ function Product(props) {
         {
             loading ? (
                 <Loadingmsg></Loadingmsg>
-            ) : error ? (
+            ) : error ? ( 
                 <Errormsg>{error.massage}</Errormsg>
             ) : (
-                <div className="row d-flex mx-auto product">
+                <div className="row d-flex mx-auto product bg-white">
                     <div className="col-12 col-md-5"><img src={product?.Image} className="product-img" alt="product-img" /></div>
                     <div className="col-12 col-md-4 px-lg-5">
                         <div className="card-body">
