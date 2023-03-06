@@ -149,4 +149,17 @@ Create Ecommerce Website
     2) create removeFromcart constant, action and reducers
     3) use action in cart.js
 
-----3:57:42 time 
+12) Create Samle users in MangoDB
+    1) npm install mangoDB
+    2) connect to mangoDB
+    3) create to config.js
+    4) npm install dotenv
+    5) export MANGODB_URL
+    6) create model/usermodel.js
+    7) create userSchema and userModel
+    8) create model/productModel.js
+    9) create productSchema and productModel
+    10) create userRoute
+    11) Seed sample data
+ 
+----4:23:09 time 

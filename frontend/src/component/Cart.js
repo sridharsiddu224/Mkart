@@ -31,7 +31,7 @@ export default function Cart() {
   return (
     <>
       <div className="row mx-auto cart-info">
-        <div className="col-md-8 p-md-5 ">
+        <div className="col-md-8 p-md-5 mt-md-3 ">
           {
             cart.cartItems.length === 0 ? <Errormsg>Cart is Empty <Link to="/">Go Shopping</Link></Errormsg> :
               <ul className='mx-auto'>{cart.cartItems.map((item, ind) => {
@@ -58,7 +58,7 @@ export default function Cart() {
                   <span className='cart-product cart-product-5'>
                     <button
                       type="button" className='btn delete-btn p-2'
-                      onClick={() => removeFromCartHandler(item.name)}
+                      onClick={() => removeFromCartHandler(item.product)}
                     >
                       Delete
                     </button>
