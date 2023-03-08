@@ -44,8 +44,8 @@ function Home() {
           ): error?(
             <Errormsg>{error.massage}</Errormsg>
           ):(
-            product?.map((products, id) => {
-              return <Productlist key={products.id} products={products}></Productlist>
+            product?.map((products, _id) => {
+              return <Productlist key={products._id} products={products}></Productlist>
             })
           )
         }

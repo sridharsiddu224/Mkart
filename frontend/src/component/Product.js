@@ -19,11 +19,10 @@ function Product(props) {
     const sProduct = useSelector(state => state.productDetails);
     const { loading, error, product } = sProduct;
 
-
     useEffect(() => {
         // fetchData()
         dispatch(singleProduct(productId));
-    }, [productId])
+    }, [productId,dispatch])
 
     const navigate = useNavigate();
     const addHandler = (e) => {
@@ -42,17 +41,17 @@ function Product(props) {
                 <Errormsg>{error.massage}</Errormsg>
             ) : (
                 <div className="row d-flex mx-auto product bg-white">
-                    <div className="col-12 col-md-5"><img src={product?.Image} className="product-img" alt="product-img" /></div>
+                    <div className="col-12 col-md-5"><img src={product.Image} className="product-img" alt="product-img" /></div>
                     <div className="col-12 col-md-4 px-lg-5">
                         <div className="card-body">
                             <div className="clearfix mt-3 ">
                                 <h4 className="card-title test-start ms-lg-5">
-                                    {product?.description}
+                                    {product.description}
                                 </h4>
                                 <span className=" ms-lg-1 mt-5">
-                                    <span className='text-dark fs-4 ms-lg-5'>₹</span>&nbsp;<span className='fs-2'>{product?.price}</span></span>
+                                    <span className='text-dark fs-4 ms-lg-5'>₹</span>&nbsp;<span className='fs-2'>{product.price}</span></span>
                                 <div className='ms-lg-5'>
-                                    <Rating rating={product?.rating} numReviews={product?.numReviews} />
+                                    <Rating rating={product.rating} numReviews={product.numReviews} />
                                 </div>
                             </div>
                         </div>
@@ -60,12 +59,12 @@ function Product(props) {
                     <div className="col-12 col-lg-3 add-to-card mx-auto">
                         <div className="d-flex justify-content-between">
                             <div className="text-dark fs-4"><span>price</span></div>
-                            <div className="fs-5"><span>₹{product?.price}</span></div>
+                            <div className="fs-5"><span>₹{product.price}</span></div>
                         </div>
                         <div className="d-flex justify-content-between">
                             <div className="name"><span className='text-dark fs-4'>status</span>&nbsp;</div>
                             <div className="name"><span className='fs-5 text-success'>{
-                                product?.countInStock > 0 ? <span>In Stock</span> : <span>Out Stock</span>
+                                product.countInStock > 0 ? <span>In Stock</span> : <span>Out Stock</span>
                             }</span></div>
                         </div>
                         <div>
@@ -96,7 +95,6 @@ function Product(props) {
                 </div>
             )
         }
-
 
     </>
 }

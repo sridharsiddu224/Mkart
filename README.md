@@ -152,6 +152,13 @@ Create Ecommerce Website
 12) Create Samle users in MangoDB
     1) npm install mangoDB
     2) connect to mangoDB
+    <!-- in server mongoose.connect('mongodb://0.0.0.0:27017/mkart',{
+        useNewUrlParser:true,seUnifiedTopology:true,});
+    then
+    const PORT = 8081; // Change this to the desired port number
+    app.listen(PORT, () => {
+    console.log(`Server listening on port http://localhost:${PORT}`);
+    });  -->
     3) create to config.js
     4) npm install dotenv
     5) export MANGODB_URL
@@ -161,5 +168,14 @@ Create Ecommerce Website
     9) create productSchema and productModel
     10) create userRoute
     11) Seed sample data
+    12) https://github.com/basir/amazona/pull/17/files
+
+13) create smaple product in mongoDB
+    1) create models/productmodel.js
+    2) create productSchema and productmodule
+    3) create productRoute
+    4) Seed sample data
+    5) frontend package.json proxy server changed
+    6) https://github.com/basir/amazona/pull/18/files
  
 ----4:23:09 time 

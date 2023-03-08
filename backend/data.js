@@ -1,22 +1,29 @@
-import bcrypt from 'bcryptjs'
+import bcrypt from 'bcryptjs';
+
 const data={
-    users : [
+    users: [
         {
-            name:"Sridhar",
-            email:'sridharbingi@gmail.com',
-            password:bcrypt.hashSync('1234',8),
-            isAdmin:true,
+          name: 'Basir',
+          email: 'Admin@example.com',
+          password: bcrypt.hashSync('01234', 8),
+          isAdmin: true,
         },
         {
-            name:"ragu",
-            email:'raguramu@gmail.com',
-            password:bcrypt.hashSync('1224',8),
-            isAdmin:false,
+          name: 'Rajesh',
+          email: 'Rajesh@example.com',
+          password: bcrypt.hashSync('012345', 8),
+          isAdmin: true,
         },
-    ],
+        {
+          name: 'John',
+          email: 'user@example.com',
+          password: bcrypt.hashSync('1234', 8),
+          isAdmin: false,
+        },
+      ],
     products:[
         {
-            id:'1',
+            _id:'1',
             name:'nike slim shirt',
             category:'shirt',
             Image:'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
@@ -29,8 +36,8 @@ const data={
             category: 'Shirts'
         },
         {
-            id:'2',
-            name:'addidas slim shirt',
+            _id:'2',
+            name:'add_idas slim shirt',
             category:'shirt',
             Image:'https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg',
             price: 150,
@@ -42,7 +49,7 @@ const data={
             category: 'Shirts'
         },
         {
-            id:'3',
+            _id:'3',
             name:'puma slim shirt',
             category:'shirt',
             Image:'https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg',
@@ -55,7 +62,7 @@ const data={
             category: 'Shirts'
         },
         {
-            id:'4',
+            _id:'4',
             name:'nike slim shirt',
             category:'shirt',
             Image:'https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg',
@@ -68,7 +75,7 @@ const data={
             category: 'Shirts'
         },
         {
-            id:'5',
+            _id:'5',
             name:'reboka slim shirt',
             category:'shirt',
             Image:'https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg',
@@ -81,7 +88,7 @@ const data={
             category: 'Shirts'
         },
         {
-            id:'6',
+            _id:'6',
             name:'nike slim shirt',
             category:'shirt',
             Image:'https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg',
@@ -94,7 +101,7 @@ const data={
             category: 'Shirts'
         },
         {
-            id:'7',
+            _id:'7',
             name:'reboka slim shirt',
             category:'shirt',
             Image:'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
@@ -107,7 +114,7 @@ const data={
             category: 'Shirts'
         },
         {
-            id:'8',
+            _id:'8',
             name:'nike slim shirt',
             category:'shirt',
             Image:'https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg',

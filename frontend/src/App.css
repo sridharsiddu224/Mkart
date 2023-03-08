@@ -1,12 +1,12 @@
 :root {
-  --color-edf7f6
-  : #edf7f6;
+  --color-edf7f6: #edf7f6;
   --color-222e50: #222e50;
   --color-3b4149: #3b4149;
   --color-fccb06: #fccb06;
   --color-fff: #fff;
   --color-8bc34a: #8bc34a;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +17,7 @@ li {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--color-222e50);
 }
@@ -202,12 +202,14 @@ h2 {
   vertical-align: middle;
 }
 
-.Offer-btn, .delete-btn{
+.Offer-btn,
+.delete-btn {
   background-color: var(--color-222e50);
   color: var(--color-fff);
 }
 
-.Offer-btn:hover, .delete-btn:hover {
+.Offer-btn:hover,
+.delete-btn:hover {
   background-color: var(--color-222e50);
   color: var(--color-fccb06);
 }
@@ -378,20 +380,24 @@ h2 {
   height: fit-content;
 }
 
-.cart-btn, .cart-pay {
+.cart-btn,
+.cart-pay {
   background-color: var(--color-fccb06);
   color: var(--color-222e50);
 }
 
-.cart-btn:hover,.cart-pay:hover {
+.cart-btn:hover,
+.cart-pay:hover {
   background-color: var(--color-222e50);
   color: var(--color-fff);
 }
 
 @media (max-width: 768px) {
   .product-img {
-    width: 100%;
+    width: 60%;
     height: fit-content;
+    justify-content: center;
+    display: flex;
   }
 
   .card-title {
