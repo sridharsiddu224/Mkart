@@ -446,7 +446,6 @@ h2 {
   background: var(--color-fff);
   justify-content: center;
   text-align: center;
-  /* color: #fff; */
   position: fixed;
   height: fit-content;
   bottom: 0 !important;

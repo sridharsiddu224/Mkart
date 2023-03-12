@@ -1,38 +1,30 @@
 {
-  "name": "mkart",
-  "type": "module",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "express-async-handler": "^1.2.0",
-    "mongoose": "^7.0.0",
-    "redux": "^4.2.1"
-  },
-  "scripts": {
-    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.20"
-  }
+    "name": "amazona",
+    "type": "module",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/basir/amazona.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/basir/amazona/issues"
+    },
+    "homepage": "https://github.com/basir/amazona#readme",
+    "dependencies": {
+        "bcrypt": "^5.1.0",
+        "bcryptjs": "^2.4.3",
+        "express": "^4.17.1",
+        "express-async-handler": "^1.2.0",
+        "mongoose": "^7.0.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.21"
+    }
 }

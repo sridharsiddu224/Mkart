@@ -1,6 +1,6 @@
-# Getting Started with Create React App and Redux
+# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -45,43 +45,26 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+### Code Splitting
 
--------------------------------------https://www.youtube.com/watch?v=TRCDsB9i3bI------------------
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-Create Ecommerce Website
-1) create react App
-    1) npx create-react-app Mkar
-    2) npm start
-    3) remove unused files 
-    4) create header
-    5) create products
-2) create rating and product component
-    1) create components/rating.js
-    2) create div.rating
-    3) style div.rating span and last span
-    4) create product component
-    5) use rating component
-3) Build Product Screen
-    1) Install react-router-dom
-    2) Use BrowserRouter and Route for Home Screen
-    3) Create homescreen.js
-    4) Add Product list code there
-    5) Create ProductScreen.js
-    6) Add new Route from product details to App.js
-    7) Create 3 columns for Product Image, info and action
+### Analyzing the Bundle Size
 
-4) Create Node.js Server
-    1) run npm init in root folder
-    2) Update package.json set type:module {note 1,2 points already existing}
-    3) Add .js to imports
-    4) npm install express
-    5) create server.js
-    6) add start command as node backend/server.js
-    7) requires express
-    8) create route fo / return backend is ready
-    9) move product.js from frontEnd to backEnd
-    10) create route for /api/products
-    11) return products
-    12) reun npm start
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-----1:52:06 time 
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

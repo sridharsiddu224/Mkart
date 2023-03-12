@@ -1,6 +1,6 @@
-# Getting Started with Create React App and Redux
+# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -45,6 +45,29 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 -------------------------------------https://www.youtube.com/watch?v=TRCDsB9i3bI------------------
 
@@ -87,7 +110,7 @@ Create Ecommerce Website
     14) past in packege.json>start> "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
     15) run npm start
     16) environment changes inside server.js
-    17) https://github.com/basir/amazona/pull/9/files#diff-e6a1d92480cd16cd30155f4e1694f991d54adcc2ad6611395c7798452f71af72
+    17) https://github.com/basir/amazona/pull/9/files
 
 5) Load products from backend
     1) https://github.com/basir/amazona/pull/10/files
@@ -157,7 +180,7 @@ Create Ecommerce Website
     then
     const PORT = 8081; // Change this to the desired port number
     app.listen(PORT, () => {
-    console.log(`Server listening on port http://localhost:${PORT}`);
+    <!-- console.log(`Server listening on port http://localhost:${PORT}`); -->
     });  -->
     3) create to config.js
     4) npm install dotenv
