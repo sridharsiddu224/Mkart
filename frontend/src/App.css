@@ -443,7 +443,8 @@ h2 {
 /* footer start */
 
 .footer {
-  background: var(--color-fff);
+  background: var(--color-222e50);
+  color: var(--color-fff );
   justify-content: center;
   text-align: center;
   position: fixed;
@@ -490,3 +491,12 @@ h2 {
 }
 
 /* cart data start */
+
+/* signing and signup form start*/
+
+.sign-1{
+  background-color: "#9A616D";
+  height: fit-content;
+}
+
+/* signing and signup form end*/

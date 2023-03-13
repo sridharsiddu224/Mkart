@@ -1,10 +1,16 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+import bodyParser from 'body-parser';
 import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
 
-const app = express();
+dotenv.config()
 
+const app = express();
+app.use(express.json());
+app.use(bodyParser.json())
+app.use(express.urlencoded({ extended: true }));
 mongoose.connect( process.env.MONGODB_URL || 'mongodb://0.0.0.0:27017/mkart',{
   useNewUrlParser:true,
   useUnifiedTopology:true,
@@ -26,6 +32,10 @@ app.get('/', (req, res) => {
 
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
+
+app.use((err, req, res, next) => {
+  res.status(500).send({ message: err.message });
+});
 
 const port = process.env.PORT || 8081;
 app.listen(port, () => {

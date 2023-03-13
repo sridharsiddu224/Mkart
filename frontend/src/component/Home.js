@@ -13,8 +13,6 @@ function Home() {
   const dispatch = useDispatch();
   const productList = useSelector(state => state.productlist);
   const { loading, error, product } = productList;
-  
-  
 
     
   // const fetchData = async () => {

@@ -200,5 +200,14 @@ Create Ecommerce Website
     4) Seed sample data
     5) frontend package.json proxy server changed
     6) https://github.com/basir/amazona/pull/18/files
+    
+14) Create Sign-in Backend
+    1. create /signin api
+    2. check email and password
+    3. generate token
+    4. install json web token
+    5. install dotenv
+    6. return token and data
+    7. test it using postman
  
 ----4:23:09 time 

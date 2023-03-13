@@ -29,15 +29,15 @@ export default function Cart() {
   return (
     <>
       <div className="row mx-auto cart-info">
-        <div className="col-md-8 p-md-5 mt-3 ">
+        <div className="col-md-8 p-md-4 mt-3 ">
           {
             cart.cartItems.length === 0 ? <Errormsg>Cart is Empty <Link to="/">Go Shopping</Link></Errormsg> :
-              <ul className='mx-auto'>{cart.cartItems.map((item, ind) => {
+              <ul className='mx-auto p-0'>{cart.cartItems.map((item, ind) => {
                 return <li key={ind} className="border border-top-1 p-1 my-1 bg-light rounded">
                   <span className='cart-product cart-product-1'><img src={item.image} className="cart-product-img" alt="product-img  bg-light" /></span>
                   <span className='cart-product cart-product-2 '><Link to={`/product/${item.product}`} className="text-dark product-name-2">{item.name}</Link></span>
                   <span className='cart-product cart-product-3'>
-                  <select
+                    <select
                       value={item.qty}
                       onChange={(e) =>
                         dispatch(
@@ -69,7 +69,7 @@ export default function Cart() {
           }
         </div>
         <div className="col-md-4 p-md-5">
-          <div className="row text-center bg-white">
+          <div className="row text-center border border-top-1 p-1 my-1 bg-light rounded">
 
             <div className='py-2'>
               Subtotal({cartItems.reduce((a, c) => a + c.qty, 0)} items)
@@ -77,9 +77,10 @@ export default function Cart() {
               </span>
             </div>
             <div className='py-2'>
-              <button className="btn cart-pay form-control" disabled={cart.cartItems.length === 0}
-              >Proceed to buy</button>
-
+              <Link to="/signin">
+                <button className="btn cart-pay form-control" disabled={cart.cartItems.length === 0}
+                >Proceed to buy</button>
+              </Link>
             </div>
           </div>
         </div>

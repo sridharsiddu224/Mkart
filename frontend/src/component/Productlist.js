@@ -4,7 +4,7 @@ import Rating from './Rating';
 
 export default function Productlist(props) {
   const { products } = props
-
+    
     return <div className="col-lg-3 col-md-6 d-flex justify-content-center main-card" key={products._id} >
         {/* <Link to={`/product/${products._id}`}> */}
             <div className="card h-100 shadow-sm text-center mx-auto" >

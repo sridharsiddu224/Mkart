@@ -8,6 +8,8 @@ import Cart from './component/Cart';
 import Pagenotfound from './component/Pagenotfound';
 import Footer from './component/Footer';
 import { useSelector } from 'react-redux';
+import Signin from './Signin';
+import Signup from './Signup';
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -18,7 +20,7 @@ function App() {
         <header className="header-upper shadow-sm py-2">
           <div className="row mx-auto">
             <div className="col-md-3 col-4 my-auto">
-              <div className="text-white text-center ms-2 text-white"><Link to="/"><h1 className='text-logo'><i>Mkart</i></h1></Link></div>
+              <div className="text-white text-center ms-2 text-white"><Link to="/"><h1 className='text-logo fw-bold'><i>Mkart</i></h1></Link></div>
             </div>
             <div className="col-md-6 col-8 my-auto">
               <div className="input-group text-center">
@@ -32,7 +34,7 @@ function App() {
               <div className="header-upper-links d-flex justify-content-around px-2 py-2">
 
                 <div className=' text-center'>
-                  <Link to="/
+                  <Link to="/signin
               ">
                     <BsFillPersonFill className='compare' />
                     <p className='m-0 compare-text'>MyAcount</p>
@@ -61,9 +63,11 @@ function App() {
           <Route path='*' element={<Pagenotfound />} />
           <Route path="/Product/:id" element={<Product />} />
           <Route path="/cart/:id?" element={<Cart />} />
+          <Route path="/signin" element={<Signin/>} />
+          <Route path="/Signup" element={<Signup/>} />
         </Routes>
-      </BrowserRouter>
       <Footer />
+      </BrowserRouter>
     </div>
   );
 }
