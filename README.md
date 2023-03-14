@@ -209,5 +209,10 @@ Create Ecommerce Website
     5. install dotenv
     6. return token and data
     7. test it using postman
+    
+15) Implement SignIn Action
+    1. create signin constants, actions and reducers
+    2. add reducer to store.js
+    3. use action in SigninScreen.js
  
-----4:23:09 time 
+----5:05:09 time 

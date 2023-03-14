@@ -77,10 +77,9 @@ export default function Cart() {
               </span>
             </div>
             <div className='py-2'>
-              <Link to="/signin">
-                <button className="btn cart-pay form-control" disabled={cart.cartItems.length === 0}
-                >Proceed to buy</button>
-              </Link>
+              <button className="btn cart-pay form-control" disabled={cart.cartItems.length === 0}
+              >
+                <Link to="/signin">Proceed to buy</Link></button>
             </div>
           </div>
         </div>

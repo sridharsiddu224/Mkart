@@ -7,13 +7,23 @@ import Product from './component/Product';
 import Cart from './component/Cart';
 import Pagenotfound from './component/Pagenotfound';
 import Footer from './component/Footer';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Signin from './Signin';
 import Signup from './Signup';
+import Shipping from './Shipping';
+import { signout } from './actions/userAction';
 
 function App() {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
+  const userName = useSelector((state) => state.userSignin);
+  const { userInfo } = userName;
+
+  const dispatch = useDispatch();
+  const signoutHandle =() => {
+    dispatch(signout())
+  }
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -32,26 +42,37 @@ function App() {
             </div>
             <div className="col-md-3  my-auto">
               <div className="header-upper-links d-flex justify-content-around px-2 py-2">
-
                 <div className=' text-center'>
-                  <Link to="/signin
-              ">
-                    <BsFillPersonFill className='compare' />
-                    <p className='m-0 compare-text'>MyAcount</p>
-                  </Link>
+                  <BsFillPersonFill className='compare' />
+                  {
+                    userInfo ? (
+                      <div className="dropdown">
+                        <Link className="btn dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" to="#">{userInfo.name}</Link>
+                        <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <li><Link className="dropdown-item" onClick={signoutHandle}>signOut</Link></li>
+                        </ul>
+                      </div>
+                    ) :
+                      (
+                        <div>
+                          <Link to="/signin" className='m-0 compare-text'>MyAcount</Link>
+                        </div>
+                      )
+                  }
+
                 </div>
 
                 <div className=' text-center my-auto'>
                   <Link to="/Cart
-              "> 
+              ">
                     <BsCart3 className='compare'></BsCart3>
                     <span className='cart-qty'>
-                    {cartItems.length > 0 && (
-                      <span className="cart-qty">{cartItems.length}</span>
-                    )}</span>
-                    
+                      {cartItems.length > 0 && (
+                        <span className="cart-qty">{cartItems.length}</span>
+                      )}</span>
+
                     <p className='m-0 compare-text'>Cart</p>
-                    </Link>
+                  </Link>
                 </div>
 
               </div>
@@ -63,10 +84,11 @@ function App() {
           <Route path='*' element={<Pagenotfound />} />
           <Route path="/Product/:id" element={<Product />} />
           <Route path="/cart/:id?" element={<Cart />} />
-          <Route path="/signin" element={<Signin/>} />
-          <Route path="/Signup" element={<Signup/>} />
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/Signup" element={<Signup />} />
+          <Route path="/shipping" element={<Shipping />} />
         </Routes>
-      <Footer />
+        <Footer />
       </BrowserRouter>
     </div>
   );
