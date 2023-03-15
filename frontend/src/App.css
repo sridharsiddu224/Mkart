@@ -1,6 +1,6 @@
 :root {
   --color-edf7f6: #edf7f6;
-  --color-222e50: #222e50;
+  --color-2861b6: #2861b6;
   --color-3b4149: #3b4149;
   --color-fccb06: #fccb06;
   --color-fff: #fff;
@@ -19,7 +19,7 @@ li {
 
 a {
   text-decoration: none;
-  color: var(--color-222e50);
+  color: var(--color-2861b6);
 }
 
 
@@ -31,25 +31,23 @@ body {
 
 /* header start */
 .heafer-top-strip {
-  background: var(--color-222e50);
+  background: var(--color-2861b6);
   border-bottom: 1px solid var(--color-3b4149);
 }
 
 .header-upper {
   background: var(--color-fff);
-  position: fixed;
-  z-index: 1;
-  top: 0 !important;
+  margin: auto;
   width: 100%;
 }
 
 .main-card {
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 @media (max-width: 768px) {
   .main-card {
-    margin-top: 100px;
+    margin-top: 10px;
   }
 }
 
@@ -64,6 +62,7 @@ body {
 
 .compare {
   font-size: 25px;
+  color: var(--color-2861b6);
 }
 
 .compare-text {
@@ -77,14 +76,37 @@ body {
   font-size: 15px;
   border-radius: 50%50%;
   background: var(--color-fff);
-  color: var(--color-222e50);
+  color: var(--color-2861b6);
 }
 
 .header-bottom {
   border-top: 1px solid var(--color-3b4149);
-  background: var(--color-222e50);
+  background: var(--color-2861b6);
 }
 
+/* homepage start */
+.home-page {
+  width: 100%;
+}
+
+.ratings-star {
+  cursor: pointer;
+}
+
+.ratings-star:hover {
+  color: var(--color-2861b6);
+}
+
+@media (max-width: 768px) {
+
+  .price-filter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* homepage end */
 .header-bottom .menu-links a {
   text-transform: uppercase;
 
@@ -94,7 +116,7 @@ body {
 
 .active {
   background-color: var(--color-fff);
-  color: var(--color-222e50) !important;
+  color: var(--color-2861b6) !important;
 }
 
 /* header End */
@@ -123,14 +145,15 @@ h2 {
   cursor: pointer;
 }
 
-.product {
-  margin-top: 100px;
+.card {
+  width: -webkit-fill-available;
 }
 
+
 @media (max-width: 768px) {
-  .product {
-    margin-top: 110px;
-  }
+  /* .product {
+    
+  } */
 }
 
 .card-img,
@@ -151,7 +174,7 @@ h2 {
   width: 100%;
   max-height: 200px;
   object-fit: contain;
-  padding: 30px;
+  padding: 20px 0px;
 }
 
 .card h2 {
@@ -204,13 +227,19 @@ h2 {
 
 .Offer-btn,
 .delete-btn {
-  background-color: var(--color-222e50);
+  background-color: var(--color-2861b6);
   color: var(--color-fff);
+}
+
+@media (max-width: 425px) {
+  .Offer-btn {
+    padding: 0px;
+  }
 }
 
 .Offer-btn:hover,
 .delete-btn:hover {
-  background-color: var(--color-222e50);
+  background-color: var(--color-2861b6);
   color: var(--color-fccb06);
 }
 
@@ -356,6 +385,41 @@ h2 {
 
 /* productlist End */
 /* product start */
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item>div {
+    display: none;
+  }
+
+  .carousel-inner .carousel-item>div:first-child {
+    display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+
+  .carousel-inner .carousel-item-start.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+  transform: translateX(0);
+}
+
 .product-img {
   height: 500px;
   width: 400px;
@@ -383,12 +447,12 @@ h2 {
 .cart-btn,
 .cart-pay {
   background-color: var(--color-fccb06);
-  color: var(--color-222e50);
+  color: var(--color-2861b6);
 }
 
 .cart-btn:hover,
 .cart-pay:hover {
-  background-color: var(--color-222e50);
+  background-color: var(--color-2861b6);
   color: var(--color-fff);
 }
 
@@ -443,8 +507,8 @@ h2 {
 /* footer start */
 
 .footer {
-  background: var(--color-222e50);
-  color: var(--color-fff );
+  background: var(--color-2861b6);
+  color: var(--color-fff);
   justify-content: center;
   text-align: center;
   position: fixed;
@@ -494,9 +558,8 @@ h2 {
 
 /* signing and signup form start*/
 
-.sign-1{
+.sign-page {
   background-color: "#9A616D";
-  height: fit-content;
 }
 
 /* signing and signup form end*/

@@ -61,16 +61,13 @@ export default function Cart() {
                       Delete
                     </button>
                   </span>
-
                 </li>
-
               })}
               </ul>
           }
         </div>
         <div className="col-md-4 p-md-5">
           <div className="row text-center border border-top-1 p-1 my-1 bg-light rounded">
-
             <div className='py-2'>
               Subtotal({cartItems.reduce((a, c) => a + c.qty, 0)} items)
               : <span className='fs-5'>₹</span><span className='fs-3'>{cartItems.reduce((a, c,) => a + (c.qty) * (c.price), 0)}

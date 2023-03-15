@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function Rating() {
+
+export default function Rating(props) {
+  const {rating} = props
   return (
-    <div>Rating</div>
+    <div>Rating : {rating} </div>
   )
 }

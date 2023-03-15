@@ -4,7 +4,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import Rating from './Rating';
 import Loadingmsg from './Loadingmsg';
 import Errormsg from './Errormsg';
-import { detailsProduct } from '../actions/productActions';
+import { detailsProduct, listProducts } from '../actions/productActions';
 
 function Product(props) {
 
@@ -29,6 +29,11 @@ function Product(props) {
     // props.history.push(`/cart/${productId}?qty=${qty}`) NOT WORKING
     // console.log(qty)
   }
+
+  useEffect(() => {
+    // fetchData()
+    dispatch(listProducts())
+  }, [dispatch])
 
   return <>
     <div className="row d-flex mx-auto product bg-white">
